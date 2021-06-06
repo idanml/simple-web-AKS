@@ -1,0 +1,18 @@
+app: simple-web
+containerPort : 80
+
+deployment:
+  replicas: 1
+  image: acrinterview.azurecr.io/simple-web:latest
+
+service:
+  protocol: TCP
+  port: 80
+
+ingress:
+  path: /swa
+
+hpa:
+  minReplicas: 1
+  maxReplicas: 10
+  averageUtilization: 50

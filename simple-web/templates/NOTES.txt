@@ -1,0 +1,3 @@
+Get app url by:
+export SERVICE_IP=$(k get svc -o wide | grep LoadBalancer | awk {'print $4'})
+echo http://$SERVICE_IP:{{ .Values.service.port }}/{{ .Values.ingress.path }}
