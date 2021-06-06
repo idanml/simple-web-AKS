@@ -10,7 +10,7 @@ service:
   port: 80
 
 ingress:
-  path: /swa
+  path: /sw
 
 hpa:
   minReplicas: 1
