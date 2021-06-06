@@ -1,0 +1,11 @@
+pipeline {
+	agent {label 'master'}
+	stages {
+		stage('Install/update simple-web with helm') {
+			steps {
+				sh 'kubectl config set-context --current --namespace=default' 
+				sh 'helm upgrade --install simple-app ./simple-web'
+			}
+		}
+	}
+}
