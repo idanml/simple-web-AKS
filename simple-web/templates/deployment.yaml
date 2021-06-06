@@ -24,7 +24,7 @@ spec:
           resources:
             requests:
               cpu: 250m
-            limit:
+            limits:
               cpu: 500m
           ports:
           - containerPort : {{ .Values.containerPort }}
