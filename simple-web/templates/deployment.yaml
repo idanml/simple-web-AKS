@@ -21,6 +21,11 @@ spec:
       containers:
         - image: {{ .Values.deployment.image }}
           name: {{ .Release.Name }}-image
+          resources:
+            requests:
+              cpu: 250m
+            limit:
+              cpu: 500m
           ports:
           - containerPort : {{ .Values.containerPort }}
       imagePullSecrets:
