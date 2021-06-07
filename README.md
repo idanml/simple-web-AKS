@@ -11,7 +11,7 @@
 - Azure login (identity)
 - Azure login to AKS as admin
 - integrate ACR to AKS with docker registry secret
-2.Image port check
+2. Image port check
 - CMD: docker pull $image
 - CMD: docker history --no-trunc $image:imagetag | grep EXPOSE
 3. Install ingress nginx controller
