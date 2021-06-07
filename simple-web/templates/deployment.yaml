@@ -23,9 +23,9 @@ spec:
           name: {{ .Release.Name }}-image
           resources:
             requests:
-              cpu: 250m
+              cpu: 50m
             limits:
-              cpu: 500m
+              cpu: 100m
           ports:
           - containerPort : {{ .Values.containerPort }}
       imagePullSecrets:
