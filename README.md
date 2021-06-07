@@ -34,15 +34,15 @@ Create ingress rule to access the service, define path of the app from NGINX con
 Create auto scalling rule depend on CPU usage.
 ### NOTES.txt
 Provide commands to expose URL of the app.
-###values.yaml
+### values.yaml
 Changeable vatiables (provide by --set flag in helm upgrade command)
--app: selector of the app pods. default value: simple-web
--port: image access port. default value: 80
--deployment.replicas: num of parallel pods of the app. default value: 1
--deployment.image: app image. default value: simple-web:latest
--service.protocol: service access protocol. default value: TCP
--service.port: service access port. default value: 80
--ingress.path: URl path to app. default value: /sw
--hpa.min/maxReplicas: define the bound of auto scaling : default value: 1-10
--hpa.averageUtilization: avarage usage of CPU (by percents) to autoscalling. averageUtilization: 50
+- app: selector of the app pods. default value: simple-web
+- port: image access port. default value: 80
+- deployment.replicas: num of parallel pods of the app. default value: 1
+- deployment.image: app image. default value: simple-web:latest
+- service.protocol: service access protocol. default value: TCP
+- service.port: service access port. default value: 80
+- ingress.path: URl path to app. default value: /sw
+- hpa.min/maxReplicas: define the bound of auto scaling : default value: 1-10
+- hpa.averageUtilization: avarage usage of CPU (by percents) to autoscalling. averageUtilization: 50
 
